@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web3.js Demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--
+    <script src="./js/web3.min.js"></script>
+    <script src="./js//abi-decoder.js"></script>
+    -->
+  </head>
+  <body>
+  	<h1>Blockchain Splitwise</h1>
+    <div class="panel panel_right">
+		<h2>My Account</h2>            
+                <p id="accountAddress" class="text-center"></p>
+                <!-- <select id="myaccount" class="account"></select> -->
+		<p>Total Owed: <span id="total_owed"></span></p>
+		<p>Last Activity: <span id="last_active"></span></p>
+	</div>
+	<div class="wallet_addresses_panel">
+		<h2>Wallet Addresses</h2>
+		<ol class="wallet_addresses"></ol>
+	</div>
+    <div class="main">
+      <h2>Add IOU</h2>
+
+      <label for="creditor">
+      	Address of person you owe:
+      </label>
+      	<input type="text" id="creditor">
+      
+      <label for="amount">
+      	Amount you owe them:
+      </label>
+		<input id="amount" type="text">
+
+       <form onSubmit="App.addIOU(); return false;">
+         <button id="addiou" type="submit" class="btn btn-primary">Add IOU</button>
+         <hr />
+       </form>
+       
+      <!-- <button id="addiou">Add IOU</button> -->
+      <h2>Users</h2>
+      <ul id="all_users"></ul>
+      <pre id="log"></pre>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+  </body>
+</html>
